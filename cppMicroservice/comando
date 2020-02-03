@@ -1,0 +1,6 @@
+docker run --rm -d -p 8080:6502 lsuazo/microscpp:latest
+
+std::string key="key";
+    std::string value="value";
+    temp[utility::conversions::to_string_t(key)] = web::json::value::string(utility::conversions::to_string_t(value));
+    

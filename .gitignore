@@ -1,0 +1,3 @@
+.vscode/*
+cppMicroservice/build/*
+cppMicroservice/libs/cpprestsdk/*

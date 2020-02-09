@@ -1,0 +1,22 @@
+version: '3'
+services:
+  cppubuntu:
+    container_name: cppubuntu
+    image: lsuazo/cppubuntu:latest
+    build:
+      context: cppUbuntu
+    networks:
+      - net
+  cppmicroservice:
+    container_name: cppmicroservice
+    image: lsuazo/cppmicroservice:latest
+    build:
+      context: cppMicroservice
+    depends_on:
+      - cppubuntu
+    ports:
+      - "8080:6502"
+    networks:
+      - net
+networks:
+  net:
